@@ -47,62 +47,7 @@
 
     <script type="text/javascript" src="catalog/view/javascript/stickyfloat.min.js"></script>
 
-    <!-- AddThis Button BEGIN -->
-    <script type="text/javascript">
-        var addthis_config = {
-//            bar_show_below : 10,
-            ui_language: "ru"
-        }
-    </script>
 
-    <style>
-        .validationSummary{
-            display: none;
-        }
-
-        .waiter .validationSummary{
-            display: inline-block;
-        }
-
-        .validationSummary{
-            display: inline-block;
-            vertical-align: text-bottom;
-        }
-
-        code{
-            white-space: pre;
-        }
-
-        .waiter .validationSummary{
-            background-image: url('/catalog/view/images/loader.gif');
-            background-position: 3px center;
-            background-repeat: no-repeat;
-            padding-left: 20px;
-
-            width: 20px;
-            height:20px;
-        }
-
-        .good .validationSummary{
-            background-image: url('/catalog/view/images/greenTick.png');
-            background-position: left center;
-            background-repeat: no-repeat;
-            padding-left: 20px;
-        }
-
-        .bad .validationSummary{
-            background-image: url('/catalog/view/images/stop.png');
-            background-position: left center;
-            background-repeat: no-repeat;
-            padding-left: 20px;
-        }
-
-    </style>
-
-
-    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=hakuoro"></script>
-    <!--script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=hakuoro"></script-->
-    <!-- AddThis Button END -->
     <?php echo $google_analytics; ?>
     <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter14471137 = new Ya.Metrika({id:14471137, enableAll: true, webvisor:true}); } catch(e) {} }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/14471137" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 </head>
