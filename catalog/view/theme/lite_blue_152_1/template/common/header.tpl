@@ -27,8 +27,12 @@
     <link rel="stylesheet" type="text/css"
           href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css"/>
     <script type="text/javascript" src="catalog/view/javascript/jquery/ui/external/jquery.cookie.js"></script>
+    <script type="text/javascript" src="catalog/view/javascript/lightbox.min.js"></script>
     <script type="text/javascript" src="catalog/view/javascript/jquery/colorbox/jquery.colorbox.js"></script>
+
+
     <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/colorbox/colorbox.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="catalog/view/css/lightbox.css" media="screen"/>
     <script type="text/javascript" src="catalog/view/javascript/jquery/tabs.js"></script>
     <script type="text/javascript" src="catalog/view/javascript/common.js"></script>
     <?php foreach ($scripts as $script) { ?>
