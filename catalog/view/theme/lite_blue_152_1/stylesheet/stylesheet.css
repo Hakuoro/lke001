@@ -93,10 +93,6 @@ label {
 	margin-bottom: 25px;
     background-color: white;
     padding: 15px;
-    -webkit-border-radius: 7px 7px 7px 7px;
-    -moz-border-radius: 7px 7px 7px 7px;
-    -khtml-border-radius: 7px 7px 7px 7px;
-    border-radius: 7px 7px 7px 7px;
 }
 #column-left + #column-right + #content, #column-left + #content {
 	margin-left: 195px;
@@ -717,12 +713,7 @@ a.button:hover, input.button:hover {
 	margin-bottom: 20px;
 }
 .box .box-heading {
-	-webkit-border-radius: 7px 7px 0px 0px;
-	-moz-border-radius: 7px 7px 0px 0px;
-	-khtml-border-radius: 7px 7px 0px 0px;
-	border-radius: 7px 7px 0px 0px;
-	border: 1px solid #67a6c6;
-	background: url('../image/background1.png') repeat-x;
+    background-color: #67a6c6;
 	padding: 8px 10px 7px 10px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -733,16 +724,13 @@ a.button:hover, input.button:hover {
 }
 .box .box-content {
 	background: #FFFFFF;
-	-webkit-border-radius: 0px 0px 7px 7px;
-	-moz-border-radius: 0px 0px 7px 7px;
-	-khtml-border-radius: 0px 0px 7px 7px;
-	border-radius: 0px 0px 7px 7px;
-	border-left: 1px solid #67a6c6;
-	border-right: 1px solid #67a6c6;
-	border-top: 0px solid #0987cf;
-	border-bottom: 1px solid #67a6c6;
 	padding: 10px;
 }
+
+.box .box-content-new {
+    background: #FFFFFF;
+}
+
 /* box products */
 .box-product {
 	width: 100%;
@@ -757,9 +745,14 @@ a.button:hover, input.button:hover {
 	margin-right: 5px;
 	margin-bottom: 15px;	
 }
-#column-left + #column-right + #content .box-product > div {
+/*#column-left + #column-right + #content .box-product > div {
 	width: 119px;
+}*/
+
+.box-product-new{
+    width: 185px;
 }
+
 .box-product .image {
 	display: block;
 	margin-bottom: 0px;
@@ -1658,10 +1651,6 @@ a.button:hover, input.button:hover {
 	border-top: 1px solid #DBDEE1;
 	border-bottom: 1px solid #DBDEE1;
 	background: #F8F8F8;
-    -webkit-border-radius: 7px 7px 7px 7px;
-    -moz-border-radius: 7px 7px 7px 7px;
-    -khtml-border-radius: 7px 7px 7px 7px;
-    border-radius: 7px 7px 7px 7px
 }
 #footer h3 {
 	color: #0987cf;
