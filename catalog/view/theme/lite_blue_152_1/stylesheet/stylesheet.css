@@ -914,7 +914,7 @@ a.button:hover, input.button:hover {
 }
 .product-compare {
 	padding-top: 6px;
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 	font-weight: bold;
 }
 .product-compare a {
@@ -1015,8 +1015,13 @@ a.button:hover, input.button:hover {
 	margin-bottom: 15px;
 }
 #column-left + #column-right + #content .product-grid > div {
-	width: 125px;
+	width: 250px;
 }
+
+.product-grid-div-new {
+    width: 210px;
+}
+
 .product-grid .image {
 	display: block;
 	margin-bottom: 0px;
