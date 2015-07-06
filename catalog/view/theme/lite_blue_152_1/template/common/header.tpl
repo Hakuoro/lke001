@@ -167,11 +167,12 @@ $bodyBackground = array(
         </script>
 
 
-        <div onclick="document.location.href = 'http://lke.su/';" style="margin-top:15px; cursor:pointer; width:170px; height:79px; float:left; background: url('/catalog/view/theme/lite_blue_152_1/image/menu/begin.png')"> </div>
-        <div onclick="document.location.href = 'http://lke.su/about_us';" style="margin-top:5px; margin-left: 5px; cursor:pointer; width:170px; height:62px; float:left; background: url('/catalog/view/theme/lite_blue_152_1/image/menu/about.png')"> </div>
+        <div onclick="document.location.href = 'http://lke.su/';" style="margin-top:5px; cursor:pointer; width:170px; height:79px; float:left; background: url('/catalog/view/theme/lite_blue_152_1/image/menu/begin.png')"> </div>
+        <div onclick="document.location.href = 'http://lke.su/about_us';" style="margin-top:25px; margin-left: 5px; cursor:pointer; width:170px; height:62px; float:left; background: url('/catalog/view/theme/lite_blue_152_1/image/menu/about.png')"> </div>
+        <div onclick="document.location.href = 'http://lke.su/dostavka';" style="margin-top:5px; margin-left: 5px; cursor:pointer; width:170px; height:75px; float:left; background: url('/catalog/view/theme/lite_blue_152_1/image/menu/dostavka2.png')"> </div>
         <!--div onclick="document.location.href = 'http://lke.su/index.php?route=account/login';" style="margin-top:5px; cursor:pointer; width:170px; height:62px; float:left; background: url('/catalog/view/theme/lite_blue_152_1/image/menu/enter.png')"> </div-->
         <!--div onclick="document.location.href = 'http://lke.su/common/gallery';" style="margin-top:10px; cursor:pointer; width:170px; height:57px; float:left; background: url('/catalog/view/theme/lite_blue_152_1/image/menu/gallery.png')"> </div-->
-        <div onclick="document.location.href = 'http://lke.su/common/gallery';" style="margin-top:10px; cursor:pointer; width:200px; height:91px; float:left; background: url('/catalog/view/theme/lite_blue_152_1/image/menu/gallery.png')"> </div>
+        <div onclick="document.location.href = 'http://lke.su/common/gallery';" style="margin-top:10px; cursor:pointer; width:170px; height:77px; float:left; background: url('/catalog/view/theme/lite_blue_152_1/image/menu/gallery1.png')"> </div>
         <!--div onclick="document.location.href = 'http://lke.su/index.php?route=checkout/cart';" style="margin-top:10px; cursor:pointer; width:170px; height:79px; float:left; background: url('/catalog/view/theme/lite_blue_152_1/image/menu/buy.png')"> </div-->
 
 
