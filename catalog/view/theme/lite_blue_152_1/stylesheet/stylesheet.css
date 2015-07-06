@@ -220,7 +220,7 @@ label {
 
 */
 
-#header #cart{min-width:160px;padding:15px;position:absolute;right:80px;top:20px;}
+#header #cart{min-width:160px;position:absolute;right:80px;}
 #header #cart .cart{border-collapse:collapse;margin-bottom:5px;width:100%;}
 #header #cart .cart .image{width:1px;}
 #header #cart .cart .image img{border:1px solid #EEE;text-align:left;}

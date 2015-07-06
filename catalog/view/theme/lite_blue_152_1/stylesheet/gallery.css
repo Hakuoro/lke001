@@ -1,0 +1,22 @@
+/* Styles for the Photo Gallery */
+.dsGallery {
+    text-align: center;
+    overflow: auto;
+}
+.dsGallery #pictures li {
+    float: left;
+    list-style: none outside none;
+    padding: 10px;
+    text-align: center;
+}
+.dsGallery #pictures li .gallery_thumbnail {
+    border: 1px solid;
+}
+.dsGallery #pictures li .gallery_thumb_image {
+    border: 3px solid;
+}
+.dsGallery #pictures li .gallery_thumb_title {
+    background-color: #6600FF;
+    color: #FFFFFF;
+    font-weight: 600;
+}
