@@ -1,8 +1,9 @@
 <div class="box">
-  <div class="box-content-new">
+  <div class="box-heading"><?php echo $heading_title; ?></div>
+  <div class="box-content">
     <div class="box-product">
       <?php foreach ($products as $product) { ?>
-      <div class="box-product-new">
+      <div>
         <?php if ($product['thumb']) { ?>
         <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
         <?php } ?>
@@ -19,8 +20,8 @@
         <?php if ($product['rating']) { ?>
         <div class="rating"><img src="catalog/view/theme/default/image/stars-<?php echo $product['rating']; ?>.png" alt="<?php echo $product['reviews']; ?>" /></div>
         <?php } ?>
-        <div class="cart">
-            <button id="button-cart" onclick="addToCart('<?php echo $product['product_id']; ?>');"  class="mdl-button  mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect">
+        <div class="cart" >
+            <button style="margin-top: 4px;margin-bottom: 8px;" id="button-cart" onclick="addToCart('<?php echo $product['product_id']; ?>');"  class="mdl-button  mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect">
                 <?php echo $button_cart; ?>
             </button>
         </div>

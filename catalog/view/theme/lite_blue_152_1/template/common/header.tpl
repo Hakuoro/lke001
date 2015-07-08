@@ -15,7 +15,7 @@
     <link href="<?php echo $icon; ?>" rel="icon"/>
     <?php } ?>
     <?php foreach ($links as $link) { ?>
-    <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>"/>
+    <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['r  el']; ?>"/>
     <?php } ?>
     <link rel="stylesheet" type="text/css" href="catalog/view/theme/lite_blue_152_1/stylesheet/stylesheet.css"/>
     <link rel="stylesheet" type="text/css" href="catalog/view/theme/lite_blue_152_1/stylesheet/fast_order.css"/>
@@ -52,6 +52,11 @@
     <![endif]-->
 
     <script type="text/javascript" src="catalog/view/javascript/stickyfloat.min.js"></script>
+
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.blue-pink.min.css" />
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
 
 
     <?php echo $google_analytics; ?>
@@ -155,9 +160,22 @@ $bodyBackground = array(
 
 ?>
 
-<body
-    style="background: url('/catalog/view/theme/lite_blue_152_1/image/<?=$bodyBackground[rand(0, count($bodyBackground) - 1)]?>')  fixed">
+<style>
 
+
+</style>
+
+<body  style="background: url('/catalog/view/theme/lite_blue_152_1/image/<?=$bodyBackground[rand(0, count($bodyBackground) - 1)]?>')  fixed">
+
+<div style="display:none">
+    <div id="order_confirm"">
+        <div class="fast_order_center">Товар добавлен в корзину</div>
+        <div class="fast_order_center">
+            <button class="fast_order_button" onclick="$.colorbox.close();"><span>Продолжить покупки</span></button>
+            <button class="fast_order_button" onclick="document.location='checkout/cart'"><span>Оформить заказ</span></button>
+        </div>
+    </div>
+</div>
 <div id="container">
 
 

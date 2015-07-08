@@ -1,12 +1,6 @@
 <?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
 <div id="content"><?php echo $content_top; ?>
-<div class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <?php echo $breadcrumb['separator']; ?><a
-            href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-    <?php } ?>
-</div>
-<h1><?php echo $heading_title; ?></h1>
+    <div class="typo-styles__demo mdl-typography--headline"><?php echo $heading_title; ?></div><br/>
 
 <div class="product-info">
 <?php if ($thumb || $images) { ?>
@@ -234,47 +228,14 @@
     <div><?php echo $text_qty; ?>
         <input type="text" name="quantity" size="2" value="<?php echo $minimum; ?>"/>
         <input type="hidden" name="product_id" size="2" value="<?php echo $product_id; ?>"/>
-        &nbsp;<input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button"/>
-
-
-
-        <!--a id="fast_order" href="#fast_order_form" class="button" />Быстрый заказ</a-->
-        <div style="display:none">
-            <div id="fast_order_form">
-                <input id="product_name" type="hidden" value="<?php echo $heading_title; ?>">
-                <input id="product_price" type="hidden" value="<?php echo ($special ? $special : $price); ?>">
-                <div class="fast_order_center"><?php echo $heading_title; ?> — ваш заказ</div>
-                <div class="fast_order_left">
-                    <p>Имя:</p>
-                    <p>Телефон:</p>
-                    <p>Комментарий:</p>
-                </div>
-                <div class="fast_order_right">
-                    <p><input type="text" id="customer_name"/></p>
-                    <p><input type="text" id="customer_phone"/></p>
-                    <p><input type="text" id="customer_message"/></p>
-                </div>
-                <div class="fast_order_center">
-                    <p id="fast_order_result">Пожалуйста, укажите ваше имя и телефон, чтобы мы могли связаться с вами</p>
-                    <button class="fast_order_button"><span>Оформить заказ</span></button>
-                </div>
-            </div>
-        </div>
-
-        <div style="display:none">
-            <div id="order_confirm"">
-                <div class="fast_order_center">Товар добавлен в корзину</div>
-                <div class="fast_order_center">
-                    <button class="fast_order_button" onclick="$.colorbox.close();"><span>Продолжить покупки</span></button>
-                    <button class="fast_order_button" onclick="document.location='/checkout/checkout'"><span>Оформить заказ</span></button>
-                </div>
-            </div>
-        </div>
-
+        &nbsp;
+        <button id="button-cart" class="mdl-button mdl-button--colored mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect">
+            <?php echo $button_cart; ?>
+        </button>
     </div>
-    <div><span>&nbsp;&nbsp;&nbsp;<?php echo $text_or; ?>&nbsp;&nbsp;&nbsp;</span></div>
+    <!--div><span>&nbsp;&nbsp;&nbsp;<?php echo $text_or; ?>&nbsp;&nbsp;&nbsp;</span></div>
     <div><a onclick="addToWishList('<?php echo $product_id; ?>');"><?php echo $button_wishlist; ?></a><br/>
-        <a onclick="addToCompare('<?php echo $product_id; ?>');"><?php echo $button_compare; ?></a></div>
+        <a onclick="addToCompare('<?php echo $product_id; ?>');"><?php echo $button_compare; ?></a></div-->
     <?php if ($minimum > 1) { ?>
     <div class="minimum"><?php echo $text_minimum; ?></div>
     <?php } ?>
@@ -434,15 +395,15 @@
                 }
 
                 if (json['success']) {
-                    //$.colorbox({href:"#order_confirm",inline:true, width:"650px", height:"330px", title:" "});
+                    $.colorbox({href:"#order_confirm",inline:true, width:"650px", height:"330px", title:" "});
 
-                    $('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');
+                    //$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');
 
-                    $('.success').fadeIn('slow');
+                    //$('.success').fadeIn('slow');
 
                     $('#cart-total').html(json['total']);
 
-                    $('html, body').animate({ scrollTop: 0 }, 'slow');
+                    //$('html, body').animate({ scrollTop: 0 }, 'slow');
                 }
             }
         });

@@ -26,7 +26,7 @@
 							</tr>
 							<tr>
 								<td><span class="required">*</span> <?php echo $entry_lastname; ?></td>
-								<td><input type="hidden" name="lastname" value="<?php echo $lastname?>"
+								<td><input type="text" name="lastname" value="<?php echo $lastname?>"
 										   class="large-field"/></td>
 							</tr>
                             <tr>

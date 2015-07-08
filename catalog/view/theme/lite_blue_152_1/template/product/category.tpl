@@ -6,7 +6,7 @@
             href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
         <?php } ?>
     </div>
-    <h1><?php echo $heading_title; ?></h1>
+    <div class="typo-styles__demo mdl-typography--display-1"><?php echo $heading_title; ?></div><br/>
     <?php if ($thumb || $description) { ?>
         <div class="category-info">
             <?php if ($thumb) { ?>
@@ -42,21 +42,9 @@
         </div>
         <?php } ?>
     <?php if ($products) { ?>
-        <div class="product-filter">
+        <!--div class="product-filter">
             <div class="display"><b><?php echo $text_display; ?></b> <?php echo $text_list; ?> <b>/</b> <a
                 onclick="display('grid');"><?php echo $text_grid; ?></a></div>
-            <!--div class="limit"><b><?php echo $text_limit; ?></b>
-                <select onchange="location = this.value;">
-                    <?php foreach ($limits as $limits) { ?>
-                    <?php if ($limits['value'] == $limit) { ?>
-                        <option value="<?php echo $limits['href']; ?>"
-                                selected="selected"><?php echo $limits['text']; ?></option>
-                        <?php } else { ?>
-                        <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
-                        <?php } ?>
-                    <?php } ?>
-                </select>
-            </div-->
             <div class="sort"><b><?php echo $text_sort; ?></b>
                 <select onchange="location = this.value;">
                     <?php foreach ($sorts as $sorts) { ?>
@@ -69,11 +57,46 @@
                     <?php } ?>
                 </select>
             </div>
-        </div>
-        <div class="product-compare"></div>
-        <div class="product-list">
+        </div-->
+    <style>
+        .demo-card-square.mdl-card {
+            width: 240px;
+            height: 390px;
+        }
+    </style>
+            <div class="mdl-grid" style="padding: 0px;">
+
+
+
             <?php foreach ($products as $product) { ?>
-            <div>
+
+                <div class="mdl-cell mdl-cell--4-col">
+                    <div class="mdl-card mdl-shadow--2dp demo-card-square">
+                        <div onclick="document.location.href = '<?php echo $product['href']; ?>';" class="mdl-card__title mdl-card--expand" style="cursor:pointer; padding-bottom:0px; background:url('<?php echo $product['thumb']; ?>') top right 15% no-repeat white;">
+                            <h1 class="mdl-card__title-text"><?php echo $product['price']; ?></h1>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <?php echo $product['name']; ?>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+
+                            <a href="<?php echo $product['href']; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                Подробнее
+                            </a>
+                            <a style="float:right; clear:right;" onclick="addToCart('<?php echo $product['product_id']; ?>'); return false;" class="mdl-button  mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect">
+                                В корзину
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            <!--div>
+
+
                 <?php if ($product['thumb']) { ?>
                 <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>"
                                                                                   title="<?php echo $product['name']; ?>"
@@ -102,18 +125,15 @@
                     alt="<?php echo $product['reviews']; ?>"/></div>
                 <?php } ?>
                 <div class="cart">
-                    <input type="button" value="<?php echo $button_cart; ?>"
-                           onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button"/>&nbsp;
-                    <input type="button" value="<?php echo $button_details; ?>"
-                           onclick="document.location.href = '<?php echo $product['href']; ?>';" class="button"/>
+                    <button onclick="addToCart('<?php echo $product['product_id']; ?>');"  class="mdl-button  mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect">
+                        <?php echo $button_cart; ?>
+                    </button>
+
                 </div>
-                <!--div class="wishlist"><a
-                    onclick="addToWishList('<?php echo $product['product_id']; ?>');"><?php echo $button_wishlist; ?></a>
-                </div>
-                <div class="compare"><a
-                    onclick="addToCompare('<?php echo $product['product_id']; ?>');"><?php echo $button_compare; ?></a>
-                </div-->
-            </div>
+
+            </div-->
+
+
             <?php } ?>
         </div>
         <div class="pagination"><?php echo $pagination; ?></div>
@@ -134,8 +154,6 @@ function display(view) {
         $('.product-list > div').each(function (index, element) {
             html = '<div class="right">';
             html += '  <div class="cart">' + $(element).find('.cart').html() + '</div>';
-            //html += '  <div class="wishlist">' + $(element).find('.wishlist').html() + '</div>';
-            //html += '  <div class="compare">' + $(element).find('.compare').html() + '</div>';
             html += '</div>';
 
             html += '<div class="left">';
@@ -198,8 +216,6 @@ function display(view) {
             }
 
             html += '<div class="cart">' + $(element).find('.cart').html() + '</div>';
-            //html += '<div class="wishlist">' + $(element).find('.wishlist').html() + '</div>';
-            //html += '<div class="compare">' + $(element).find('.compare').html() + '</div>';
 
             $(element).html(html);
         });
@@ -213,9 +229,9 @@ function display(view) {
 view = $.cookie('display');
 
 if (view) {
-    display(view);
+   // display(view);
 } else {
-    display('grid');
+   // display('grid');
 }
 //--></script>
 <?php echo $footer; ?>
