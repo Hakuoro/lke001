@@ -26,7 +26,7 @@
 							</tr>
 							<tr>
 								<td><span class="required">*</span> <?php echo $entry_lastname; ?></td>
-								<td><input type="text" name="lastname" value="<?php echo $lastname?>"
+								<td><input type="hidden" name="lastname" value="<?php echo $lastname?>"
 										   class="large-field"/></td>
 							</tr>
                             <tr>
@@ -131,18 +131,11 @@
 					  </div>
 					</div>
 						<script type="text/javascript"><!--
-							<?php if(in_array(substr(VERSION, 0, 5), array('1.5.3', '1.5.4'))) { ?>
 								$('.colorbox').colorbox({
 									width: 640,
 									height: 480
 								});
-							<?php } else { ?>
-								$('.fancybox').fancybox({
-									width: 560,
-									height: 560,
-									autoDimensions: false
-								});
-							<?php }?>
+
 						//--></script>
 					<?php }?>
 

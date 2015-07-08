@@ -227,7 +227,7 @@ $controller->addPreAction(new Action('common/seo_url'));
 	//print_r($request->get['_route_']);
 // Router
 if (isset($request->get['route'])) {
-	$action = new Action($request->get['_route_']);
+	$action = new Action($request->get['route']);
 } else {
 	$action = new Action('common/home');
 }

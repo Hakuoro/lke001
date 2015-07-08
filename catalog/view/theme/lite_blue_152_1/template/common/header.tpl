@@ -18,6 +18,7 @@
     <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>"/>
     <?php } ?>
     <link rel="stylesheet" type="text/css" href="catalog/view/theme/lite_blue_152_1/stylesheet/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/lite_blue_152_1/stylesheet/fast_order.css"/>
     <?php foreach ($styles as $style) { ?>
     <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>"
           media="<?php echo $style['media']; ?>"/>
@@ -29,6 +30,7 @@
     <script type="text/javascript" src="catalog/view/javascript/jquery/ui/external/jquery.cookie.js"></script>
     <script type="text/javascript" src="catalog/view/javascript/lightbox.min.js"></script>
     <script type="text/javascript" src="catalog/view/javascript/jquery/colorbox/jquery.colorbox.js"></script>
+
 
 
     <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/colorbox/colorbox.css" media="screen"/>
