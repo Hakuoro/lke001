@@ -17,7 +17,7 @@
     <?php foreach ($links as $link) { ?>
     <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['r  el']; ?>"/>
     <?php } ?>
-    <link rel="stylesheet" type="text/css" href="catalog/view/theme/lite_blue_152_1/stylesheet/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/lite_blue_152_1/stylesheet/stylesheet.css?q=1"/>
     <link rel="stylesheet" type="text/css" href="catalog/view/theme/lite_blue_152_1/stylesheet/fast_order.css"/>
     <?php foreach ($styles as $style) { ?>
     <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>"

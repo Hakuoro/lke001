@@ -1,63 +1,77 @@
 <?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
 <style type="text/css">
-	.payment .buttons{
-		display: none;
+    .mdl-textfield__label{
+        color:rgba(0,0,0,.60);
+        top: 12px;
 	}
+
+    .mdl-textfield--floating-label.is-focused .mdl-textfield__label{
+        color:rgba(0,0,0,.50);
+        top: -6px;
+    }
+
+    .mdl-textfield{
+        padding-top: 8px;
+    }
+
+    .mdl-textfield--floating-label.is-dirty .mdl-textfield__label{
+        top: -6px;
+        color:rgba(0,0,0,.50);
+    }
+
+
+
+
 </style>
 <div id="content"><?php echo $content_top; ?>
-	<div class="breadcrumb">
-		<?php foreach($breadcrumbs as $breadcrumb) { ?>
-		<?php echo $breadcrumb['separator']; ?><a
-				href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-		<?php } ?>
-	</div>
-	<h1><?php echo $heading_title; ?></h1>
-
+	<h3><?php echo $heading_title; ?></h3>
 	<div class="checkout">
 		<div id="checkout">
 			<div class="checkout-content" style="display: block">
 				<form id="checkout_form" onsubmit="return false;">
-					<div class="left">
-						<table class="form">
-							<tr>
-								<td><span class="required">*</span> <?php echo $entry_firstname; ?></td>
-								<td><input type="text" name="firstname" value="<?php echo $firstname?>"
-										   class="large-field"/></td>
-							</tr>
-							<tr>
-								<td><span class="required">*</span> <?php echo $entry_lastname; ?></td>
-								<td><input type="text" name="lastname" value="<?php echo $lastname?>"
-										   class="large-field"/></td>
-							</tr>
-                            <tr>
-                                <td><span class="required">*</span> <?php echo $entry_telephone; ?></td>
-                                <td><input type="text" name="telephone" value="<?php echo $telephone?>"
-                                           class="large-field"/></td>
-                            </tr>
-                            <tr>
-                                <td><span class="required">*</span> <?php echo $entry_email; ?></td>
-                                <td><input type="text" name="email" value="<?php echo $email?>" class="large-field"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="required">*</span> <?php echo $entry_postcode; ?></td>
-                                <td><input type="text" name="postcode" value="<?php echo $postcode; ?>" class="large-field" /></td>
-                            </tr>
-                            <tr>
-                                <td><span class="required">*</span> <?php echo $entry_city; ?></td>
-                                <td><input type="text" name="city" value="<?php echo $city; ?>" class="large-field" /></td>
-                            </tr>
-							<tr>
-								<td><span class="required">*</span> <?php echo $entry_address_1; ?></td>
-								<td><input type="text" name="address_1" value="<?php echo $address_1?>"
-										   class="large-field"/></td>
-							</tr>
-							<tr>
-								<td><?php echo $column_comment; ?>:</td>
-								<td><textarea rows="8" style="width: 300px"
-											  name="comment"><?php echo $comment?></textarea></td>
-							</tr>
-						</table>
+					<div class="left" style="padding-left: 8px;">
+
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="in-firstname" name="firstname" value="<?php echo $firstname?>"/>
+                            <label class="mdl-textfield__label" for="in-firstname"><span class="required">*</span> <?php echo $entry_firstname; ?></label>
+                        </div>
+
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="in-lastname" name="lastname" value="<?php echo $lastname?>"/>
+                            <label class="mdl-textfield__label" for="in-lastname"><span class="required">*</span> <?php echo $entry_lastname; ?></label>
+                        </div>
+
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="in-telephone" name="telephone" value="<?php echo $telephone?>"/>
+                            <label class="mdl-textfield__label" for="in-telephone"><span class="required">*</span> <?php echo $entry_telephone; ?></label>
+                        </div>
+
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="in-email" name="email" value="<?php echo $email?>"/>
+                            <label class="mdl-textfield__label" for="in-email"><span class="required">*</span> <?php echo $entry_email; ?></label>
+                        </div>
+
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="in-postcode" name="postcode" value="<?php echo $postcode?>"/>
+                            <label class="mdl-textfield__label" for="in-postcode"><span class="required">*</span> <?php echo $entry_postcode; ?></label>
+                        </div>
+
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="in-city" name="city" value="<?php echo $city?>"/>
+                            <label class="mdl-textfield__label" for="in-city"><span class="required">*</span> <?php echo $entry_city; ?></label>
+                        </div>
+
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="in-address_1" name="address_1" value="<?php echo $address_1?>"/>
+                            <label class="mdl-textfield__label" for="in-address_1"><span class="required">*</span> <?php echo $entry_address_1; ?></label>
+                        </div>
+
+
+                        <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
+                            <textarea class="mdl-textfield__input" type="text" rows= "3" id="in-comment" name="comment" ><?php echo $comment?></textarea>
+                            <label class="mdl-textfield__label" for="in-comment"><?php echo $column_comment; ?></label>
+                        </div>
+
 					</div>
 					<div class="right">
 						<div class="shipping-content" style="display: block">

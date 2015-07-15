@@ -714,6 +714,8 @@ class ControllerCheckoutCheckout extends Controller
 
             $payment_template->data['payment_code'] = $this->session->data['payment_code'];
             $payment_template->data['payment'] = $this->getChild('payment/' . $payment_template->data['payment_code']);
+
+            //print_r('payment/' . $payment_template->data['payment_code']); exit;
         } else {
             $payment_template->data['payment_methods'] = array();
             $payment_template->data['payment_code'] = '';
