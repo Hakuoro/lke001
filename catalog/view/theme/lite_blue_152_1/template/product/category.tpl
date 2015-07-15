@@ -17,60 +17,20 @@
             <?php } ?>
         </div>
         <?php } ?>
-    <?php if ($categories) { ?>
-        <h2><?php echo $text_refine; ?></h2>
-        <div class="category-list">
-            <?php if (count($categories) <= 5) { ?>
-            <ul>
-                <?php foreach ($categories as $category) { ?>
-                <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-                <?php } ?>
-            </ul>
-            <?php } else { ?>
-            <?php for ($i = 0; $i < count($categories);) { ?>
-                <ul>
-                    <?php $j = $i + ceil(count($categories) / 4); ?>
-                    <?php for (; $i < $j; $i++) { ?>
-                    <?php if (isset($categories[$i])) { ?>
-                        <li><a href="<?php echo $categories[$i]['href']; ?>"><?php echo $categories[$i]['name']; ?></a>
-                        </li>
-                        <?php } ?>
-                    <?php } ?>
-                </ul>
-                <?php } ?>
-            <?php } ?>
-        </div>
-        <?php } ?>
+
     <?php if ($products) { ?>
-        <!--div class="product-filter">
-            <div class="display"><b><?php echo $text_display; ?></b> <?php echo $text_list; ?> <b>/</b> <a
-                onclick="display('grid');"><?php echo $text_grid; ?></a></div>
-            <div class="sort"><b><?php echo $text_sort; ?></b>
-                <select onchange="location = this.value;">
-                    <?php foreach ($sorts as $sorts) { ?>
-                    <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
-                        <option value="<?php echo $sorts['href']; ?>"
-                                selected="selected"><?php echo $sorts['text']; ?></option>
-                        <?php } else { ?>
-                        <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
-                        <?php } ?>
-                    <?php } ?>
-                </select>
-            </div>
-        </div-->
+
     <style>
         .demo-card-square.mdl-card {
             width: 290px;
             height: 400px;
         }
     </style>
-            <div class="mdl-grid" style="padding: 0px;">
-
-
+        <div class="mdl-grid" >
 
             <?php foreach ($products as $product) { ?>
 
-                <div class="mdl-cell mdl-cell--4-col">
+                <div class="mdl-cell" >
                     <div class="mdl-card mdl-shadow--3dp demo-card-square">
                         <div onclick="document.location.href = '<?php echo $product['href']; ?>';" class="mdl-card__title mdl-card--expand" style="cursor:pointer; padding-bottom:0px; background:url('<?php echo $product['thumb']; ?>') top right 15% no-repeat white;">
                         </div>
@@ -79,12 +39,13 @@
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
 
-                            <a href="<?php echo $product['href']; ?>" style="padding-top: 6px;" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+
+                            <button style="padding-left: 16px;" onclick="document.location.href = '<?php echo $product['href']; ?>';"  class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                                 <h1 class="mdl-card__title-text" style="font-weight: bold;color: #424242;"><?php echo $product['price']; ?></h1>
-                            </a>
-                            <a style="float:right; clear:right;padding-top: 3px;" onclick="addToCart('<?php echo $product['product_id']; ?>'); return false;" class="mdl-button  mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect">
+                            </button>
+                            <button style="float:right; clear:right;" onclick="addToCart('<?php echo $product['product_id']; ?>'); return false;" class="mdl-button  mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect">
                                 В корзину
-                            </a>
+                            </button>
 
 
                         </div>
