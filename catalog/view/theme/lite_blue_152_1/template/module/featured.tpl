@@ -1,8 +1,37 @@
+<style>
+    .feature-card-square.mdl-card {
+        width: 240px;
+        height: 360px;
+    }
+</style>
+
 <div class="box">
   <div class="box-content-new">
     <div class="box-product">
       <?php foreach ($products as $product) { ?>
-      <div class="box-product-new">
+
+        <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-card mdl-shadow--3dp feature-card-square">
+                <div onclick="document.location.href = '<?php echo $product['href']; ?>';" class="mdl-card__title mdl-card--expand" style="cursor:pointer; padding-bottom:0px; background:url('<?php echo $product['thumb']; ?>') top right 15% no-repeat white;">
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <div class="product-title"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+
+                    <a href="<?php echo $product['href']; ?>" style="padding-top: 6px;" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                        <h1 class="mdl-card__title-text" style="font-weight: bold;color: #424242;"><?php echo $product['price']; ?></h1>
+                    </a>
+                    <a style="float:right; clear:right; padding-top: 3px;" onclick="addToCart('<?php echo $product['product_id']; ?>'); return false;" class="mdl-button  mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect">
+                        В корзину
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+
+      <!--div class="box-product-new">
         <?php if ($product['thumb']) { ?>
         <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
         <?php } ?>
@@ -24,7 +53,10 @@
                 <?php echo $button_cart; ?>
             </button>
         </div>
-      </div>
+      </div-->
+
+
+
       <?php } ?>
     </div>
   </div>

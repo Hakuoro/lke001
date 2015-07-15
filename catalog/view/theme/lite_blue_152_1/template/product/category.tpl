@@ -1,12 +1,12 @@
 <?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
 <div id="content"><?php echo $content_top; ?>
-    <div class="breadcrumb">
+    <!--div class="breadcrumb">
         <?php foreach ($breadcrumbs as $breadcrumb) { ?>
         <?php echo $breadcrumb['separator']; ?><a
             href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
         <?php } ?>
-    </div>
-    <div class="typo-styles__demo mdl-typography--display-1"><?php echo $heading_title; ?></div><br/>
+    </div-->
+    <div class="typo-styles__demo mdl-typography--display-1" style="padding-bottom: 5px;"><?php echo $heading_title; ?></div>
     <?php if ($thumb || $description) { ?>
         <div class="category-info">
             <?php if ($thumb) { ?>
@@ -60,8 +60,8 @@
         </div-->
     <style>
         .demo-card-square.mdl-card {
-            width: 240px;
-            height: 390px;
+            width: 290px;
+            height: 400px;
         }
     </style>
             <div class="mdl-grid" style="padding: 0px;">
@@ -71,19 +71,18 @@
             <?php foreach ($products as $product) { ?>
 
                 <div class="mdl-cell mdl-cell--4-col">
-                    <div class="mdl-card mdl-shadow--2dp demo-card-square">
+                    <div class="mdl-card mdl-shadow--3dp demo-card-square">
                         <div onclick="document.location.href = '<?php echo $product['href']; ?>';" class="mdl-card__title mdl-card--expand" style="cursor:pointer; padding-bottom:0px; background:url('<?php echo $product['thumb']; ?>') top right 15% no-repeat white;">
-                            <h1 class="mdl-card__title-text"><?php echo $product['price']; ?></h1>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            <?php echo $product['name']; ?>
+                            <div class="product-title"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
 
-                            <a href="<?php echo $product['href']; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                                Подробнее
+                            <a href="<?php echo $product['href']; ?>" style="padding-top: 6px;" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                <h1 class="mdl-card__title-text" style="font-weight: bold;color: #424242;"><?php echo $product['price']; ?></h1>
                             </a>
-                            <a style="float:right; clear:right;" onclick="addToCart('<?php echo $product['product_id']; ?>'); return false;" class="mdl-button  mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect">
+                            <a style="float:right; clear:right;padding-top: 3px;" onclick="addToCart('<?php echo $product['product_id']; ?>'); return false;" class="mdl-button  mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect">
                                 В корзину
                             </a>
 
