@@ -17,14 +17,13 @@
                 <div class="mdl-card__supporting-text">
                     <div class="product-title"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
                 </div>
-                <div class="mdl-card__actions mdl-card--border">
-
-                    <a href="<?php echo $product['href']; ?>" style="padding-top: 6px;" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                <div class="mdl-card__actions mdl-card--border" style="padding-left: 0px;">
+                    <button style="padding-left: 0px;" onclick="document.location.href = '<?php echo $product['href']; ?>';"  class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                         <h1 class="mdl-card__title-text" style="font-weight: bold;color: #424242;"><?php echo $product['price']; ?></h1>
-                    </a>
-                    <a style="float:right; clear:right; padding-top: 3px;" onclick="addToCart('<?php echo $product['product_id']; ?>'); return false;" class="mdl-button  mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect">
+                    </button>
+                    <button onclick="addToCart('<?php echo $product['product_id']; ?>'); return false;" class="mdl-button  mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect">
                         В корзину
-                    </a>
+                    </button>
 
 
                 </div>
