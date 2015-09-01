@@ -1,7 +1,7 @@
 <div id="cart">
     <div class="heading">
         <div style="color: black; text-align: right; font-size: 22px; margin-bottom: 7px;">+7(906) 781-33-05</div>
-        <div style="color: black; text-align: right; font-size: 22px; margin-bottom: 7px;">+7(925) 562-02-80</div>
+        <div style="color: black; text-align: right; font-size: 22px; margin-bottom: 7px;">+7(926) 361-61-35</div>
         Корзина: <a><span id="cart-total"><?php echo $text_items; ?></span></a></div>
     <div class="content">
         <?php if ($products || $vouchers) { ?>
